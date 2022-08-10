@@ -11,7 +11,7 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://localhost:3000",
+    origin: "https://sanskrit-cms-backend.herokuapp.com",
     credentials: true,
   })
 );
