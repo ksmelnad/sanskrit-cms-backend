@@ -107,7 +107,7 @@ app.get(
   }),
   function (req, res) {
     // Successful authentication, redirect home.
-    res.redirect("https://sanskrit-cms.netlify.app/dashboard");
+    res.redirect("https://sanskrit-cms.netlify.app");
   }
 );
 
