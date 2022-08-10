@@ -11,7 +11,7 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://https://sanskrit-cms.netlify.app/",
+    origin: "https://sanskrit-cms.netlify.app/",
     credentials: true,
   })
 );
