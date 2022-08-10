@@ -9,14 +9,12 @@ const client = require("./db/dbconn");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 app.use(express.json());
-// app.use(
-//   cors({
-//     origin: "https://sanskrit-cms-backend.herokuapp.com",
-//     credentials: true,
-//   })
-// );
-
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://https://sanskrit-cms.netlify.app/",
+    credentials: true,
+  })
+);
 
 app.use(
   session({
@@ -90,7 +88,6 @@ passport.use(
   )
 );
 
-
 app.get("/", (req, res) => {
   res.send("Server is running !");
 });
@@ -105,11 +102,12 @@ app.get(
 app.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    failureRedirect: "http://localhost:3000/login",
+    failureRedirect: "https://sanskrit-cms.netlify.app",
+    session: true,
   }),
   function (req, res) {
     // Successful authentication, redirect home.
-    res.redirect("http://localhost:3000");
+    res.redirect("https://sanskrit-cms.netlify.app/dashboard");
   }
 );
 
