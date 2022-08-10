@@ -9,12 +9,14 @@ const client = require("./db/dbconn");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://sanskrit-cms-backend.herokuapp.com",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://sanskrit-cms-backend.herokuapp.com",
+//     credentials: true,
+//   })
+// );
+
+app.use(cors());
 
 app.use(
   session({
