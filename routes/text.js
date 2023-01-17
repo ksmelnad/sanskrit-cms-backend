@@ -17,7 +17,7 @@ router.route("/text").post(function (req, res) {
     });
 });
 
-// Show all public texts
+// Show all public-texts
 router.route("/public").get(function (req, res) {
   let db_connect = client.db("svcms");
   db_connect
