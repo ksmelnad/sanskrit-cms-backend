@@ -9,12 +9,12 @@ const client = require("./db/dbconn");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 app.use(express.json());
-// app.use(
-//   cors({
-//     origin: "https://sanskrit-cms.netlify.app",
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: "https://sanskrit-cms-frontend.onrender.com",
+    credentials: true,
+  })
+);
 
 app.use(
   session({
